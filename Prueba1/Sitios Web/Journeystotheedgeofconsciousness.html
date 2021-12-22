@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JOURNEYS TO THE EDGE OF CONSCIOUSNESS (2019)</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link href="../assets/CSS/main.css" rel="stylesheet">
+    <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/><style>
+    </style>
+    <script src="https://kit.fontawesome.com/a2ab843f42.js" crossorigin="anonymous"></script>
+    <script>
+        //DOM
+        //querySelector// //querySelectorAll
+        /*
+        let links = document.querySelectorAll("a");
+        
+        links.forEach(function(link){
+            console.log(link);
+        })
+        */
+        
+        // Obtener los elementos de la clase .close
+        
+        let links = document.querySelectorAll(".close");
+        
+        // Recorrerlos.
+        
+        links.forEach(function(link){
+        //Agregar un nuevo elemento click a cada uno de ellos -case sensitive
+        
+        link.addEventListener("click",function(ev){
+            ev.preventDefault();
+            let content = document.querySelector(".content");
+        
+        
+        // Quitarle las clases de animación que ya tiene.
+            content.classList.remove("fadeInDown");
+            content.classList.remove("animated");
+        
+        // Agregar clases para animar su salida fadeOutUp.
+            content.classList.add("fadeOutUp");
+            content.classList.add("animated");
+
+            setTimeout(function(){
+                location.href = "/Prueba1";
+            },2000);
+        
+            return false;
+        
+            });
+        });</script>
+</head>
+<body>
+    <!-- Contenido de nuestro ranking -->
+    <div class="container">
+        <div class="content">
+            <div class="animate__animated animate__fadeInDown">
+                <div class="actions">
+                    <a href="../" class="close">
+                        <span>X</span>
+                    </a>
+                </div>
+            <header>
+                <h2 class="title-item">
+                    <span class="position">5</span>
+                    JOURNEYS <br>TO THE EDGE OF CONSCIOUSNESS (2019)</h2>
+            </header>
+            <section>
+                <img src="images/journey.jpg" class="journey">
+                <div class="text">
+                    <div class="df">
+                        <i class="fab fa-youtube"></i>
+                        <a class="enlace" href="https://www.youtube.com/watch?v=P8YwnVelFm8">https://www.youtube.com/watch?v=P8YwnVelFm8</a>
+                    </div>
+                    <p class="paragraph">Sumérgete en este viaje animado, para conocer las experiencias psicodélicas de tres de las mejores mentes de todos los tiempos: Aldous Huxley, Timothy Leary y Alan Watts. Este colorido documental te ofrece una mirada al interior de los cerebros de estos pioneros psicodélicos, que expresaron sus ideas brillantemente a través de la literatura y la oratoria.</p>
+            </section>
+            </table>
+        </div>
+    </div>
+    <script src="JavaScript/main.js"></script>
+</body>
+</html>
